@@ -61,7 +61,6 @@ const CreateForm = ({ setPosts }) => {
         }
     }
 
-
     return (
         <div className="create-form-wrapper">
             

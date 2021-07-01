@@ -12,7 +12,7 @@ const Portfolio = ({ isViewing, setIsViewing }) => {
 
             <main className="portfolio-wrapper">
                 <header>
-                    <div className="portfolio-triangle">{isViewing ? <Link to="/portfolio"><i onClick={() => setIsViewing(false)} class="fas fa-2x portfolio-go-back fa-level-up-alt"></i></Link> : ''}</div>
+                    <div className="portfolio-triangle">{isViewing ? <Link to="/portfolio"><i onClick={() => setIsViewing(false)} className="fas fa-2x portfolio-go-back fa-level-up-alt"></i></Link> : ''}</div>
                 </header>
                 <nav className="portfolio-links">
                     <div className="portfolio-linkswrapper">

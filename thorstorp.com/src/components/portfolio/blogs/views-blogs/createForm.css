@@ -4,10 +4,11 @@
 
 .create-form-wrapper {
     position: relative;
-    top: -55px;
+   
     height: 100vh;
     background-image: url('../assets/andrew-neel-cckf4TsHAuw-unsplash.jpg');
     background-size: cover;
+   
     
 
 }
