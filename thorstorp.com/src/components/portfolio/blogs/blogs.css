@@ -1,0 +1,107 @@
+
+  .topnav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #312a2a;
+    min-width: 250px;
+    padding: 0.2rem;
+  }
+  
+  h4.topnav-wrapper , p.topnav-wrapper {
+    color: #cecece;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+  }
+  i.topnav-wrapper {
+    color: #cecece;
+  }
+
+  i.topnav-wrapper  {
+  margin-left: 0.5rem;
+  }
+  p.topnav-wrapper  {
+    font-size: 0.3em;
+    margin-right: 0.5rem;
+  }
+  
+  .theme-button {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 10;
+    cursor: pointer;
+    top: 2rem;
+  }
+  
+  .navbar-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 1rem;
+    background-color: #cecece;
+  }
+  
+  .blogs-navlink {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+   text-decoration: none;
+   color: black;
+  }
+  .blogs-navlink:hover {
+   text-decoration: underline;
+  }
+  
+  .blogs-background-wrapper {
+    position: relative;
+    
+    top:0;
+    left:0;
+    right: 0;
+    bottom:0;
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  
+  .blogs-background {
+    background-image: url('./assets/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');
+    border-radius: 20%;
+    background-size: cover;
+    height: 500px;
+    width: 350px;
+    margin-top: 1rem;
+   
+  }
+  .blogs-background2 {
+    background-image: url('./assets/andrew-neel-cckf4TsHAuw-unsplash.jpg');
+    border-radius: 20%;
+    background-size: cover;
+    height: 500px;
+    width: 350px;
+    margin-top: 1rem;
+    
+  
+  }
+  .blogs-background2:hover {
+    box-shadow: 2px 2px 2px 2px black;
+  }
+  .blogs-background:hover {
+    box-shadow: 2px 2px 2px 2px black;
+  }
+  
+  .justify-vertical {
+      margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .justify-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+  }

@@ -1,0 +1,46 @@
+.viewpost-wrapper {
+    margin-top: 2rem;
+    height: 300px;
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: white;
+    width: 200px;
+}
+h2.viewpost-wrapper  {
+    font-size: 0.8em;
+    text-decoration: underline;
+    text-align: left;
+}
+p.viewpost-wrapper  {
+    font-size: 0.3em;
+    color: black;
+   
+}
+h5.viewpost-wrapper {
+    font-size: 0.5em;
+}
+
+.blogs-links {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 1rem;
+    
+}
+
+*.blogs-links  {
+    color: black;
+    font-size: 0.8em;
+    margin-top: 1rem;
+    text-decoration: underline;
+    
+}
+
+.blabla-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+}

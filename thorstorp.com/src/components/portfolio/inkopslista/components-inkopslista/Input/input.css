@@ -1,0 +1,51 @@
+
+.shoppinglist-input-wrapper {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 350px;
+    min-width: 300px;
+}
+
+div.shoppinglist-input-wrapper  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-all {
+    background-color: red;
+    cursor: pointer;
+    border: none;
+    box-shadow: -3px 3px 3px 0px black;
+    border-radius: 5px;
+    padding: 4.7px;
+    color: white;
+}
+
+.add {
+    padding: 4.7px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: green;
+    color: white;
+    box-shadow: -3px 3px 3px 0px black;
+    cursor: pointer;
+}
+
+.input-field {
+    
+    padding: 4.7px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    box-shadow: -3px 3px 3px 0px black;
+    background-color: cadetblue;
+    color: white;
+}
+
+.input-field:focus {
+    outline-width: 0;
+}

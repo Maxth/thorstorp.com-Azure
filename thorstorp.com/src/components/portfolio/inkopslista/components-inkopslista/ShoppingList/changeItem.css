@@ -1,0 +1,36 @@
+.change-wrapper {
+   
+    display:flex;
+    flex-direction: row;
+    align-items:flex-end;
+    justify-content:left;
+    min-height: 60px;
+    max-width: 350px;
+    min-width: 300px;
+}
+
+.change-input {
+    
+    border: none;
+    font-size: 1.3em;
+    border-right: 1px solid black;
+    width:250px;
+}
+.change-input:focus {
+    outline-width: 0;
+   
+}
+.change-check {
+    margin-left: 0.3rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+.change-check:hover {
+    color: greenyellow;
+}
+.change-regret {
+    cursor: pointer;
+}
+.change-regret:hover {
+    color: crimson;
+}

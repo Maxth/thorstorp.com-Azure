@@ -1,0 +1,139 @@
+.CV-wrapper {
+    background-color: var(--text-color);
+    padding-bottom: 10rem;
+   
+}
+
+.CV-triangle {
+    height: 20vh;
+    background-color: var(--text-color2);
+    clip-path: polygon(10% 0, 50% 100%, 90% 0)
+}
+
+.linkswrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.CV-links-span  {
+    text-decoration: none;
+    color: var(--text-color2);
+    font-size: 1em;
+    font-family: 'Graphik-Bold', serif;
+    
+}
+
+.CV-links-span:hover {
+text-decoration: underline;
+}
+
+.CV-links {
+    border-bottom: var(--text-color2) solid;
+    padding-bottom: 7px;
+}
+
+.about-wrapper {
+    font-family: 'Graphik-Regular', serif;
+    border-bottom: var(--text-color2) dotted;
+    padding-bottom: 2rem;
+}
+
+.desc-wrapper {
+    font-family: 'Graphik-Regular', serif;
+    border-bottom: var(--text-color2) dotted;
+    padding-bottom: 0.5rem;
+}
+
+.CV-strong  {
+    font-family: 'Graphik-Bold', serif;
+    display: block;
+    text-align: left;
+    margin-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.5em;
+}
+
+.CV-p  {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.sub-header {
+    font-family: 'Graphik-Bold', serif;
+    display: block;
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 1rem;
+}
+.dropdown {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    align-items: center;
+    cursor: pointer;
+}
+small.dropdown  {
+margin-left: 0.5rem;
+text-decoration: underline;
+}
+
+.arrow-down-anim {
+    animation-name: arrow-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes arrow-down {
+    0% {transform: translateY(0%);}
+    50% {transform: translateY(-10%);}
+    100% {transform: translateY(0%);}
+    
+}
+
+.edu-dropdown {
+    max-height: 0px;
+    overflow: hidden;
+    
+}
+
+.height {
+    /* transition: max-height 3s linear 0s; */
+    max-height:500px;
+}
+.edu-down-anim {
+    animation-name: edu-down;
+    animation-duration: 0.5s;
+    animation-timing-function:ease-in-out;
+}
+
+@keyframes edu-down {
+from {max-height: 0px;}
+
+to {max-height: 500px;}
+}
+
+
+.display-none {
+    display:none;
+}
+
+@media (min-width: 768px) {
+    .CV-wrapper {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .CV-wrapper {
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+}

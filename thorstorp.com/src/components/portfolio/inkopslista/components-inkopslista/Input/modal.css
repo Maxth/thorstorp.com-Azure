@@ -1,0 +1,51 @@
+.modal-bg {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.412);
+}
+
+.card {
+    position: fixed;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 30%;
+    height: 100px;
+    background-color: #cecece;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 20px;
+    min-width: 200px;
+}
+
+.modal-text {
+    margin-top: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+}
+
+.Ok-button {
+    width: 60px;
+    background-color: darkslategrey;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.cancel-button {
+    width: 60px;
+    background-color: darkslategrey;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
