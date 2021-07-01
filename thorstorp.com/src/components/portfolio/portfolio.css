@@ -13,6 +13,35 @@
     align-items: center;
 }
 
+.portfolio-links {
+    border-bottom: var(--text-color2) solid;
+    padding-bottom: 8px;
+}
+
 .portfolio-go-back {
     color: var(--text-color);
+}
+
+.portfolio-go-back:hover {
+    color: white;
+}
+
+.portfolio-linkswrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .portfolio-wrapper {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .portfolio-wrapper {
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
 }

@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { NavLink } from 'react-router-dom';
 import TopNav from './components-blogs/TopNav';
 import Background from './views-blogs/Background';
 import Background2 from './views-blogs/Background2';
@@ -75,18 +74,19 @@ const Blogs = ({setIsViewing}) => {
                     <Router>
 
                         <TopNav />
-                        <button style={{ color: theme.text, background: theme.bg }} onClick={handleThemeClick} className="theme-button">Set {isLightTheme ? 'dark' : 'light'} theme</button>
+                        <button style={{ color: theme.text, background: theme.bg }} onClick={handleThemeClick} className="blogs-font theme-button">Set {isLightTheme ? 'dark' : 'light'} theme</button>
                         <Switch>
 
                             <Route exact path="/portfolio/blogs">
                                 <div className="blogs-background-wrapper">
-                                    <NavLink to="/portfolio/blogs/create"><Background2 /></NavLink>
-                                    <NavLink to="/portfolio/blogs/view"><Background /></NavLink>
+                                    <Background2 />
+                                    <Background />
                                 </div>
                             </Route>
 
                             <Route exact path="/portfolio/blogs/create">
-                                <CreateForm />
+                               <CreateForm />
+                                
                             </Route>
                             <Route exact path="/portfolio/blogs/view">
 

@@ -1,9 +1,9 @@
 .post-wrapper {
     padding: 0.1rem;
     background-color: white;
-    width: 150px;
-    height: 50px;
-    margin: 0.1rem;
+    width: 400px;
+    height: 100px;
+    margin: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,21 +11,21 @@
     border-radius: 4px;
 }
 
-*.post-wrapper  {
+.post-wrapper * {
     color:black;
 }
-h3.post-wrapper  {
-    font-size: 0.7em;
+.post-wrapper h3 {
+    font-size: 1.2em;
     text-decoration: underline;
     
 }
-p.post-wrapper  {
-    font-size: 0.1em;
+.post-wrapper p {
+    font-size: 0.8em;
     font-weight: 10;
     color: #312a2a;
 }
-h6.post-wrapper  {
-    font-size: 0.2em;
+.post-wrapper h6 {
+    font-size: 1em;
     color: #6d6234;
 }
 

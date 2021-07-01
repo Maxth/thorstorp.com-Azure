@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Background = () => {
 
@@ -9,12 +9,13 @@ const Background = () => {
 
     return (
         <div className="justify-vertical">
-            <NavLink style={{color: theme.text }} to="/portfolio/blogs/view"><h2 className="blogs-navlink">View Articles</h2></NavLink>
-            
-            <div className="blogs-background">
+            <Link style={{ color: theme.text, textDecoration: 'none' }} to="/portfolio/blogs/view"><h2 className="blogs-navlink">View Articles</h2></Link>
 
+            <Link style={{ color: theme.text, textDecoration: 'none' }} to="/portfolio/blogs/view"> 
+            <div className="blogs-background">
             </div>
-            </div>
+            </Link>
+        </div>
     )
 }
 

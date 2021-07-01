@@ -78,7 +78,7 @@ text-decoration: underline;
     align-items: center;
     cursor: pointer;
 }
-small.dropdown  {
+.dropdown small {
 margin-left: 0.5rem;
 text-decoration: underline;
 }

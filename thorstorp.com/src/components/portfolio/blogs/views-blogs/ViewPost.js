@@ -32,20 +32,20 @@ const ViewPost = () => {
     return (
         <div className="blabla-wrapper">
             {state.post ? 
-            <div style={isLightTheme ? {background: 'white'} : {background: 'black'}} className="viewpost-wrapper">
-            <h2 style={isLightTheme ? {color: 'black'} : {color: 'white'}}>{state.post.title}</h2>
+            <div className="blogs-font viewpost-wrapper" style={isLightTheme ? {background: 'white'} : {background: 'black'}}>
+            <h2 className="blogs-font" style={isLightTheme ? {color: 'black'} : {color: 'white'}}>{state.post.title}</h2>
             <br />
-            <p style={isLightTheme ? {color: 'black'} : {color: 'white'}}>{state.post.body}</p>
+            <p className="blogs-font" style={isLightTheme ? {color: 'black'} : {color: 'white'}}>{state.post.body}</p>
             <br /><br />
-            <h5 style={isLightTheme ? {color: 'black'} : {color: 'white'}}>Written by: {state.post.userId}</h5>
+            <h5 className="blogs-font" style={isLightTheme ? {color: 'black'} : {color: 'white'}}>Written by: {state.post.userId}</h5>
 
         </div>    
         : 'Im sorry, I cant seem to find this post'
         }
             
             <div className="blogs-links">
-                <Link style={{color: theme.text }} to="/portfolio/blogs/view">Go back to the list of blogs..</Link>
-                <Link style={{color: theme.text }} to="/portfolio/blogs/create">Go back to write something..</Link>
+                <Link className="blogs-font" style={{color: theme.text }} to="/portfolio/blogs/view">Go back to the list of blogs..</Link>
+                <Link className="blogs-font" style={{color: theme.text }} to="/portfolio/blogs/create">Go back to write something..</Link>
 
             </div>
         </div>

@@ -10,15 +10,15 @@
     min-width: 300px;
 }
 
-h2.shoppinglist-topnav  {
+.shoppinglist-topnav h2 {
    
-    color:darkblue;
+    color: var(--text-color);
 }
-small.shoppinglist-topnav  {
+.shoppinglist-topnav small {
     font-size: 1em;
-    color:darkblue;
+    color:var(--text-color);
 }
 
 .icon {
-    color:darkblue;
+    color:var(--text-color);
 }

@@ -52,10 +52,10 @@ const Intro = () => {
                 </div>
                 <div className="links-container">
                     <div>
-                    <Link style={{textDecoration: 'none'}}to="/CV"><h3 className="intro-links">My CV</h3></Link>
+                    <Link style={{textDecoration: 'none'}} to="/CV"><h3 className="intro-links">My CV</h3></Link>
                         <br />
                         <br />
-                        <Link style={{textDecoration: 'none'}}to="/portfolio"><h3 className="intro-links">My Portfolio</h3></Link>
+                        <Link style={{textDecoration: 'none'}} to="/portfolio"><h3 className="intro-links">My Portfolio</h3></Link>
                     </div>
                 </div>
             </div>

@@ -54,7 +54,7 @@ const Cv = () => {
         <section>
             <div className="about-wrapper">
                 <strong className="CV-strong">About me</strong>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto veritatis quidem eveniet, fugit, nam
+                <p className="CV-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto veritatis quidem eveniet, fugit, nam
                     tempore vitae facilis, corrupti rem asperiores non a sapiente. Atque, quod repellat necessitatibus,
                     vel minus dolor, consectetur unde dolorem cupiditate illo quibusdam hic labore dolores assumenda ad
                     non est placeat autem laudantium. Soluta error quaerat et!</p>

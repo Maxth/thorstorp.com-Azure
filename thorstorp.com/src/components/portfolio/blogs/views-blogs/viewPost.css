@@ -1,23 +1,22 @@
 .viewpost-wrapper {
     margin-top: 2rem;
-    height: 300px;
+    height: fit-content;
     padding: 2rem;
     border-radius: 5px;
     background-color: white;
-    width: 200px;
+    width: 300px;
 }
-h2.viewpost-wrapper  {
-    font-size: 0.8em;
-    text-decoration: underline;
+.viewpost-wrapper h2 {
+    font-size: 1.3em;
     text-align: left;
 }
-p.viewpost-wrapper  {
-    font-size: 0.3em;
+.viewpost-wrapper p{
+    font-size: 1em;
     color: black;
    
 }
-h5.viewpost-wrapper {
-    font-size: 0.5em;
+.viewpost-wrapper h5{
+    font-size: 1.1em;
 }
 
 .blogs-links {
@@ -26,15 +25,18 @@ h5.viewpost-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-left: 1rem;
+    margin-left: 3rem;
     
 }
-
-*.blogs-links  {
+.blogs-links a:first-child {
+    margin-bottom: 3rem;
+}
+.blogs-links a {
     color: black;
-    font-size: 0.8em;
-    margin-top: 1rem;
+    font-size: 1.5em;
+    
     text-decoration: underline;
+    
     
 }
 

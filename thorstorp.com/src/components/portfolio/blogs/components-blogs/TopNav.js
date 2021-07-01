@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
-import { NavLink } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
 
 const TopNav = () => {
@@ -10,16 +10,16 @@ const TopNav = () => {
 
     return (
         <div>
-            <NavLink to="/portfolio/blogs">
-            <div style={{background: theme.bg }} className="topnav-wrapper">
+            <Link style={{textDecoration: 'none'}} to="/portfolio/blogs">
+            <div style={{background: theme.bg }} className="blogs-topnav-wrapper">
 
-                <i style={{color: theme.text }}className="far fa-comment-dots"></i>
+                <i style={{color: theme.text }}className="far fa-3x fa-comment-dots"></i>
 
 
-                <h4 style={{color: theme.text }}>Blogs</h4>
+                <h1 style={{color: theme.text }}>Blogs</h1>
                 <p style={{color: theme.text }}>By Max Thorstorp</p>
             </div>
-            </NavLink>
+            </Link>
 
         </div>
     )

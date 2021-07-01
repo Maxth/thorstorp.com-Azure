@@ -19,8 +19,8 @@ const ChangeItem = ({ setToggleChange, changeItemCallback, id }) => {
     return (
         <div className="change-wrapper">
             <input className="change-input" type="text" value={newText} onChange={e => setNewText(e.target.value)}  autoFocus />
-            <i onClick={changeCheck} className="fas fa-2x fa-check change-check"></i>
-            <i onClick={toggleChange} className="fas fa-2x fa-times change-regret"></i>
+            <i onClick={changeCheck} className="fas fa-5x fa-check change-check"></i>
+            <i onClick={toggleChange} className="fas fa-5x fa-times change-regret"></i>
         </div>
     )
 }

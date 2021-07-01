@@ -1,7 +1,8 @@
 .view-wrapper {
     background-image: url('../assets/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg');
-    position: fixed;
-    top: 25.6px;
+    position: relative;
+    top: -55px;
+    height: 100vh;
     bottom: 0;
     left:0;
     right:0;
@@ -11,13 +12,12 @@
 
 .posts-list {
     position: absolute;
-    top: 2rem;
+    top: 7rem;
     transform: translateX(-50%);
     left: 50%;
-    height: 280px;
-    width: 160px;
+    height: 50vh;
+    width: 420px;
     overflow-y:scroll;
-    overflow-x: hidden;
     background-color: #cecece;
     border-radius: 2px;
 }

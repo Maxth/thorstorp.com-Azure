@@ -3,19 +3,19 @@
   }
 
 .create-form-wrapper {
-    position: fixed;
-    top: 25.6px;
-    bottom: 0;
-    left:0;
-    right:0;
+    position: relative;
+    top: -55px;
+    height: 100vh;
     background-image: url('../assets/andrew-neel-cckf4TsHAuw-unsplash.jpg');
     background-size: cover;
+    
+
 }
 
 .blogs-form {
-    padding: 0.5rem;
+    padding: 2rem;
     position: absolute;
-    top: 2rem;
+    top: 80px;
     transform: translateX(-50%);
     left: 50%;
     background-color: #312a2a;
@@ -25,28 +25,41 @@
     align-items: center;
 }
 #title {
-    height: 20px;
+    height: 50px;
+    min-width: 350px;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.3em;
     padding: 0.2rem;
 }
+#title::placeholder{
+    text-align: center;
+    font-size: 1.5em;
+}
+
 #content {
+    min-width: 350px;
     padding: 0.3rem;
-    font-size: 0.5rem;
+    font-size: 1em;
+    resize: none;
 }
 #content::placeholder {
     
-   padding-top: 30%;
+   padding-top: 10%;
     text-align: center;
+    font-size: 2em;
+    
 }
 
 #author {
-    height: 20px;
+    height: 50px;
+    min-width: 350px;
     padding: 0.3rem;
-    font-size: 0.8rem;
+    font-size: 1em;
 }
 #author::placeholder {
+    margin-top: 50%;
     text-align: center;
+    font-size: 1.5em;
 }
 .blogs-input {
     background-color: black;
@@ -68,7 +81,7 @@
 
 .blogs-error {
     color: red;
-    font-size: 0.2em;
+    font-size: 0.9em;
     margin-bottom: 0.3rem;
 }
 
@@ -77,14 +90,15 @@
 }
 
 .blogs-btn {
-    padding: 0.2rem;
+    padding: 1rem;
     background-color: #44793d;
     color: #96c58f;
     cursor: pointer;
+    font-size: 2em;
 }
 .blogs-clear {
     margin-left: 1rem;
-    font-size: 0.3em;
+    font-size: 1.3em;
     cursor: pointer;
     text-decoration: underline;
     color: #803333;
