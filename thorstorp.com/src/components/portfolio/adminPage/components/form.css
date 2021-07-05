@@ -1,0 +1,74 @@
+.admin-page.form-container {
+    grid-area: first;
+    margin-bottom: auto;
+    margin-top: 1rem;
+}
+.admin-page.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+.admin-page.user-input {
+    border: none;
+    box-shadow: 0px 1px 1px rgb(122, 122, 122);
+    
+    padding:0.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin-page.user-input:focus {
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0px 1px 1px black;
+}
+
+.admin-page.add-user-btn {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    background-color: darkslategray;
+    color: white;
+    font-size: 1.5em;
+
+}
+
+.admin-page.delete-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 25%;
+    background-color: darkred;
+    color: white;
+    font-size: 1.2em;
+}
+
+.admin-page.change-btn {
+    cursor: pointer;
+    width: 75%;
+    height: 50px;
+    background-color: darkslategray;
+    color: white;
+    font-size: 1.2em;
+}
+
+.admin-page.user-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-page.invalid-text{
+    margin-top: 1rem;
+    color: red;
+    text-align: center;
+    font-size: 1em;
+}
+
+.admin-page.reset{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 0.5rem;
+    font-size: 1.3em;
+    cursor: pointer;
+}

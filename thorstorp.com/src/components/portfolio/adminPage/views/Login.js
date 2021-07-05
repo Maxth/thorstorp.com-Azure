@@ -28,7 +28,7 @@ const Login = () => {
         <div className="admin-page login-wrapper">
             <small id="admin-page-usernote">Username: "admin"</small>
             <small id="admin-page-passwordnote">Password: "password"</small>
-            <div className="admin-page inputs-wrapper">
+            <form className="admin-page inputs-wrapper">
                 <div className="admin-page input-wrapper">
                     <label className="admin-page login-labels" htmlFor="admin-page-username">Username:</label>
                     <input value={username} onChange={e => setUsername(e.target.value)} id="admin-page-username" className="admin-page login-input" type="text" placeholder="Enter username" />
@@ -39,7 +39,7 @@ const Login = () => {
                 </div>
                 <Link style={{textDecoration: 'none'}} to="/portfolio/admin-page/dashboard"><button onClick={handleLoginClick} className="admin-page input-wrapper btn">Login</button></Link>
                 {isInvalid ? <small style={{color: 'red'}}>Incorrect credentials</small> : ''}
-            </div>
+            </form>
         </div>
     )
 }

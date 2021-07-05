@@ -1,0 +1,48 @@
+.admin-page.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(153, 153, 153, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-page.modal-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkslategray;
+    padding: 2rem;
+    border-radius: 10px;
+    height: 150px;
+}
+
+.admin-page.modal-box h2 {
+    color: white;
+}
+
+.admin-page.modal-btn-container{
+    display: block;
+    justify-content: space-evenly;
+}
+
+.admin-page.modal-regret {
+    margin-right: 1rem;
+    font-size: 1.5em;
+    background-color: grey;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.admin-page.modal-yes {
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 1.5em;
+    background-color: grey;
+    color: white;
+    padding: 0.5rem;
+}
