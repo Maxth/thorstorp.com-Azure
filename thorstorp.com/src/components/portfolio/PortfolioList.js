@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 const PortfolioList = ({setIsViewing}) => {
     return (
         <div>
-            <Link onClick={()=> setIsViewing(true)} to="/portfolio/inkopslista">Inköpslista</Link>
+            <Link to="/portfolio/inkopslista">Inköpslista</Link>
             <br />
-            <Link onClick={()=> setIsViewing(true)} to="/portfolio/blogs">Blogs</Link>
+            <Link to="/portfolio/blogs">Blogs</Link>
+            <Link to="/portfolio/admin-page">Admin page</Link>
         </div>
     )
 }

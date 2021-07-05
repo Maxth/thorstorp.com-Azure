@@ -37,6 +37,7 @@ const Blogs = ({setIsViewing}) => {
 
     
   useEffect(()=>{
+    setIsViewing(true)
     const _html = document.querySelector('html');
     test();
     _html.style.backgroundColor = "#312a2a";

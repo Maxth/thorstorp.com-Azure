@@ -1,0 +1,72 @@
+.admin-page.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 119px);
+    
+}
+
+.admin-page.inputs-wrapper {
+    margin-bottom: 10rem;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    box-shadow: 0px 2px 3px 3px rgb(185, 185, 185);
+    
+}
+.admin-page.input-wrapper {
+    margin: 1rem;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-page.login-input{
+    border: none;
+    padding: 1rem;
+    box-shadow: 0px 1px 3px 3px rgb(185, 185, 185);
+}
+
+.admin-page.login-labels{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.admin-page.input-wrapper.btn {
+    font-size: 1.5em;
+    background-color: darkslategray;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 3px rgb(185, 185, 185);
+}
+
+.admin-page.input-wrapper.btn:active {
+    background-color: lightslategray;
+    transform: translateY(2px);
+}
+
+#admin-page-usernote {
+    position: fixed;
+    top: 20vh;
+    left: 10vw;
+    transform: rotate(-30deg);
+    font-family: cursive;
+    
+}
+#admin-page-passwordnote {
+    position: fixed;
+    top: 30vh;
+    left: 5vw;
+    transform: rotate(-10deg);
+    font-family: cursive;
+    
+}

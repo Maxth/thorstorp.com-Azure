@@ -9,6 +9,7 @@ import Inkopslista from './components/portfolio/inkopslista/Inkopslista';
 import Blogs from './components/portfolio/blogs/Blogs';
 import ThemeContextProvider from './components/portfolio/blogs/context/ThemeContext';
 import PostsContextProvider from './components/portfolio/blogs/context/PostsContext';
+import AdminPage from './components/portfolio/adminPage/AdminPage';
 
 
 function App() {
@@ -40,6 +41,10 @@ function App() {
             <Blogs setIsViewing={setIsViewing}/>
             </PostsContextProvider>
             </ThemeContextProvider>
+          </Route>
+          <Route exact path="/portfolio/admin-page">
+          <Portfolio isViewing={isViewing} setIsViewing={setIsViewing} />
+          <AdminPage setIsViewing={setIsViewing}/>
           </Route>
         </Switch>
       </Router>
