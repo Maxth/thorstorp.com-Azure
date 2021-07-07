@@ -17,7 +17,7 @@ const TopNav = () => {
 
 
                 <h1 style={{color: theme.text }}>Blogs</h1>
-                <p style={{color: theme.text }}>By Max Thorstorp</p>
+                <p style={{color: theme.text}}>By Max Thorstorp</p>
             </div>
             </Link>
 

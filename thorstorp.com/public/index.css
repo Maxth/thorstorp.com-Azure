@@ -1,0 +1,49 @@
+#loading {
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--text-color2);
+    z-index: 1;
+    
+  }
+  
+  .circle {
+    transform: translate(-50%,-50%);
+    height: 100px;
+    width: 100px;
+    border: 6px solid var(--text-color);
+    border-radius: 50%;
+   
+  }
+  .animate {
+    animation-name: ripple;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+  #c1 {
+    animation-delay: 0s;
+  }
+  #c2 {
+    animation-delay: 0.33s;
+  }
+  #c3 {
+    animation-delay: 0.66s;
+  }
+  
+  @keyframes ripple {
+    from {
+      transform: scale(0);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }

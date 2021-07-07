@@ -1,15 +1,20 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './dashboard.css'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import Form from '../components/Form'
 
 import User from '../components/User'
 import { Link } from 'react-router-dom'
+import { getAll } from '../../../../store/actions/adminPage-userActions'
 
 const Dashboard = () => {
 
-
+    const dispatch = useDispatch()
     const users = useSelector(state => state.users);
+
+    useEffect(() => {
+        dispatch(getAll())
+    }, [dispatch])
     
 
     return (
@@ -28,7 +33,7 @@ const Dashboard = () => {
                        <th className="admin-page table-header">Last name</th>
                        <th className="admin-page table-header">Email</th>
                     </tr>
-                    {!!users.length && users.map(user=><User key= {user.id} id={user.id} firstName= {user.firstName} lastName={user.lastName} email={user.email}/>)}
+                    {!!users.length && users.map(user=> <User key= {user._id} _id= {user._id} firstName= {user.firstName} lastName={user.lastName} email={user.email}/>)}
                     </tbody>
                 </table>
             </div>

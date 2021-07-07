@@ -3,26 +3,19 @@ import { useDispatch } from 'react-redux';
 import { set } from '../../../../store/actions/adminPage-userActions';
 import '../views/dashboard.css'
 
-const User = ({ firstName, lastName, email, id }) => {
+const User = (props) => {
 
     const dispatch = useDispatch();
 
     const handleUserClick = () => {
-        dispatch(set(
-            {
-                id: {id},
-                firstName: {firstName},
-                lastName: {lastName},
-                email: {email}
-            }))
-
+        dispatch(set({ props }))
     }
 
     return (
         <tr className="admin-page table-row" onClick={handleUserClick}>
-            <td className="admin-page table-data">{firstName}</td>
-            <td className="admin-page table-data">{lastName}</td>
-            <td className="admin-page table-data">{email}</td>
+            <td className="admin-page table-data">{props.firstName}</td>
+            <td className="admin-page table-data">{props.lastName}</td>
+            <td className="admin-page table-data">{props.email}</td>
         </tr>
     )
 }

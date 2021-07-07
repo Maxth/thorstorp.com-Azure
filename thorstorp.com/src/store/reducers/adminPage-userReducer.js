@@ -1,35 +1,27 @@
 import actiontypes from "../actiontypes";
-import {v4 as uuid} from 'uuid';
+
 
 const initState = {
-    users: [
-        {
-            id: '1',
-            firstName: 'Max',
-            lastName: 'Thorstorp',
-            email: 'max_thorstorp@hotmail.com'
-            }
-    ],
+    users: [],
     isUserClicked: null,
     user: {
-        id: '',
+        _id:'',
         firstName: '',
-        lastName: '',
+        lastName:'',
         email: ''
-    }
+    },
+    error: undefined
 }
 
 const userReducer = (state=initState, action) => {
 
     switch(action.type) {
 
-        case actiontypes().user.add:
-            return {...state,
-               users: [ ...state.users,
-               { id: uuid(),
-                   ...action.payload
-               }
-            ]
+
+        case actiontypes().user.addUserFailure:
+            return{
+                ...state,
+                error: action.payload
             }
 
         case actiontypes().user.set:
@@ -37,29 +29,17 @@ const userReducer = (state=initState, action) => {
                 ...state,
                 isUserClicked: true,
                 
-                user: {
-                    id: action.payload.id,
-                    firstName: action.payload.firstName,
-                    lastName: action.payload.lastName,
-                    email: action.payload.email,
-                }
+                user: action.payload.props
                 
                 
                 
                 }
 
-        case actiontypes().user.change:
-            const changedUser = {
-                id: uuid(),
-                firstName: action.payload.firstName,
-                lastName: action.payload.lastName,
-                email: action.payload.email
-            }
+        case actiontypes().user.changeUserFailure:
             return {
+                    
                 ...state,
-                users: [...state.users.filter((x)=> x.id.toString() !== action.payload.id.toString()),
-                    changedUser
-                ]
+                error: action.payload
                 
             }
 
@@ -69,14 +49,25 @@ const userReducer = (state=initState, action) => {
                     isUserClicked: action.payload
                 }
 
-            case actiontypes().user.deleteUser:
+           
+            case actiontypes().user.deleteUserFailure:
                 return {
                     
                     ...state,
-                    users: state.users.filter(x => x.id.toString() !== action.payload.id.id.toString())
+                    error: action.payload
                     
                 }
 
+            case actiontypes().user.getAllSuccess:
+                return {
+                    ...state,
+                    users: action.payload,
+                }
+            case actiontypes().user.getAllFailure:
+                return {
+                    ...state,
+                    error: action.payload
+                }
 
         default:
             return state;

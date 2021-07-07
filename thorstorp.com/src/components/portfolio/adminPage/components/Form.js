@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './form.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { addUser, change, setUserIsclicked } from '../../../../store/actions/adminPage-userActions';
+import { addUser, changeUser, setUserIsclicked } from '../../../../store/actions/adminPage-userActions';
 import Modal from './Modal';
 
 const Form = () => {
@@ -11,11 +11,10 @@ const Form = () => {
     const [isInvalid, setisInvalid] = useState(false);
     const [isDuplicate, setIsDuplicate] = useState(false);
     const isUserClicked = useSelector(state => state.isUserClicked);
-    const [inputs, setInputs] = useState({
-        firstName: '',
-        lastName: '',
-        email: ''
-    })
+    const [inputFirstName, setInputFirstName] = useState('')
+    const [inputLastName, setInputLastName] = useState('')
+    const [inputEmail, setInputEmail] = useState('')
+
     const user = useSelector(state => state.user);
     const users = useSelector(state => state.users)
 
@@ -23,19 +22,21 @@ const Form = () => {
         e.preventDefault();
 
 
-        if (inputs.firstName.trim() === '' || inputs.lastName.trim() === '' || inputs.email.trim() === '')
+        if (inputFirstName.trim() === '' || inputLastName.trim() === '' || inputEmail.trim() === '')
             setisInvalid(true)
-        else if (users.find(x => x.email.toLowerCase() === inputs.email.toLowerCase()))
+        else if (users.find(x => x.email.toLowerCase().trim() === inputEmail.toLowerCase().trim()))
             setIsDuplicate(true)
         else {
-            dispatch(addUser(inputs));
+            dispatch(addUser({
+                firstName: inputFirstName,
+                lastName: inputLastName,
+                email: inputEmail
+            }));
             setisInvalid(false);
             setIsDuplicate(false);
-            setInputs({
-                firstName: '',
-                lastName: '',
-                email: ''
-            })
+            setInputFirstName('');
+            setInputLastName('');
+            setInputEmail('');
         }
 
 
@@ -43,14 +44,14 @@ const Form = () => {
     }
 
     const handleChange = () => {
-        if (inputs.firstName.trim() === '' || inputs.lastName.trim() === '' || inputs.email.trim() === '')
+        if (inputFirstName.trim() === '' || inputLastName.trim() === '' || inputEmail.trim() === '')
             setisInvalid(true)
             else {
-        dispatch(change({
-            id: user.id.id,
-            firstName: inputs.firstName,
-            lastName: inputs.lastName,
-            email: inputs.email
+        dispatch(changeUser({
+            _id: user._id,
+            firstName: inputFirstName,
+            lastName: inputLastName,
+            email: inputEmail
         }))
         setisInvalid(false);
         dispatch(setUserIsclicked(false));
@@ -63,28 +64,23 @@ const Form = () => {
     }
 
     const handleReset = () => {
-        setInputs( {
-            firstName: user.firstName.firstName,
-            lastName: user.lastName.lastName,
-            email: user.email.email
-        })
+        setInputFirstName(user.firstName);
+        setInputLastName(user.lastName);
+        setInputEmail(user.email);
+
+            
     }
 
     useEffect(()=>{
         if (isUserClicked) {
-            setInputs( {
-                id: user.id.id,
-                firstName: user.firstName.firstName,
-                lastName: user.lastName.lastName,
-                email: user.email.email
-            })
+            setInputFirstName(user.firstName)
+            setInputLastName(user.lastName)
+            setInputEmail(user.email)
         }
         else {
-        setInputs({
-            firstName:'',
-            lastName: '',
-            email: ''
-        })
+            setInputFirstName('');
+            setInputLastName('');
+            setInputEmail('');
     }
 
     }, [isUserClicked, user])
@@ -97,11 +93,11 @@ const Form = () => {
             <form onSubmit={handleSub} className="admin-page form">
 
                 <label htmlFor="firstName">First name:</label>
-                <input value={inputs.firstName} onChange={e => setInputs({ ...inputs, firstName: e.target.value })} className="admin-page user-input" id="firstName" type="text" />
+                <input value={inputFirstName} onChange={e => setInputFirstName(e.target.value)} className="admin-page user-input" id="firstName" type="text" />
                 <label htmlFor="lastName">Last name:</label>
-                <input value={inputs.lastName} onChange={e => setInputs({ ...inputs, lastName: e.target.value })} className="admin-page user-input" id="lastName" type="text" />
+                <input value={inputLastName} onChange={e => setInputLastName(e.target.value)} className="admin-page user-input" id="lastName" type="text" />
                 <label htmlFor="email">Email:</label>
-                <input value={inputs.email} onChange={e => setInputs({ ...inputs, email: e.target.value })} className="admin-page user-input" id="email" type="email" />
+                <input value={inputEmail} onChange={e => setInputEmail(e.target.value)} className="admin-page user-input" id="email" type="email" />
 
 
 

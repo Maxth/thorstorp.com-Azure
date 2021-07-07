@@ -37,7 +37,7 @@ const Login = () => {
                     <label className="admin-page login-labels" htmlFor="admin-page-password">Password:</label>
                     <input value={password} onChange={e => setPassword(e.target.value)} id="admin-page-password" className="admin-page login-input" type="password" placeholder="Enter password" />
                 </div>
-                <Link style={{textDecoration: 'none'}} to="/portfolio/admin-page/dashboard"><button onClick={handleLoginClick} className="admin-page input-wrapper btn">Login</button></Link>
+                <Link style={{textDecoration: 'none'}} to="/portfolio/admin-page/dashboard"><button onClick={handleLoginClick} className="admin-page input-wrapper btn">Log in</button></Link>
                 {isInvalid ? <small style={{color: 'red'}}>Incorrect credentials</small> : ''}
             </form>
         </div>

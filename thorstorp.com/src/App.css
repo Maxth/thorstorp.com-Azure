@@ -12,3 +12,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.font-graphik-bold {
+  font-family: 'Graphik-Bold', serif;
+}
+
+.font-graphik-regular {
+  font-family: 'Graphik-Regular', serif;
+}
