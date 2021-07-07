@@ -58,6 +58,10 @@ exports.create = (req, res) => {
 exports.delete = (req, res) => {
     try {
         User.deleteOne({ _id: req.body._id })
+        .then((user)=> {
+            if (user == null) 
+                return res.status(404).json()
+        })
         .then(() => res.status(204).json())
         .catch(() => res.status(400).json())
     }

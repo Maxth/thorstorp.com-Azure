@@ -1,4 +1,5 @@
 import { useState} from 'react';
+import "swagger-ui-react/swagger-ui.css"
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Intro from './components/Intro';
